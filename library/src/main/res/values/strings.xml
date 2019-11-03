@@ -3,7 +3,7 @@
     <string name="fingerprint_not_recognized">指纹扫描失败，请重试</string>
     <string name="fingerprint_hint">将手指接触传感器</string>
     <string name="fingerprint_success">认证成功</string>
-    <string name="sign_in">身份验证</string>
+    <string name="sign_in">请进行指纹验证</string>
     <string name="fingerprint_description">请将手指接触传感器进行验证</string>
     <string name="password_description">请输入密码进行验证</string>
     <string name="new_fingerprint_enrolled_description">新录入的指纹，需要密码进行验证</string>
