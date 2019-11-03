@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#1A2A5A">
+    android:layout_height="match_parent">
 
     <View
         android:id="@+id/background_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:background="#44000000" />
 
     <LinearLayout
         android:id="@+id/content_layout"
@@ -15,6 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_margin="40dp"
+        android:background="@drawable/bg_fingerprint_content"
         android:orientation="vertical">
 
         <LinearLayout
@@ -28,7 +29,6 @@
                 android:id="@+id/auth_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:visibility="gone"
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
                 android:paddingTop="16dp"
@@ -44,11 +44,9 @@
                     android:id="@+id/fingerprint_container"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@mipmap/bg_finger"
                     android:paddingBottom="8dp"
                     android:paddingLeft="16dp"
                     android:paddingRight="16dp"
-                    android:visibility="visible"
                     android:paddingTop="16dp">
 
                     <TextView
@@ -58,25 +56,21 @@
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentTop="true"
                         android:text="@string/fingerprint_description"
-                        android:visibility="gone"
                         android:textColor="?android:attr/textColorSecondary" />
 
                     <ImageView
                         android:id="@+id/fingerprint_icon"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:minHeight="73dp"
-                        android:minWidth="73dp"
-                        android:layout_centerInParent="true"
+                        android:layout_alignParentLeft="true"
                         android:layout_below="@+id/fingerprint_description"
                         android:layout_marginTop="20dp"
-                        android:src="@mipmap/finger" />
+                        android:src="@drawable/ic_fingerprint" />
 
                     <TextView
                         android:id="@+id/fingerprint_status"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:visibility="gone"
                         android:layout_alignBottom="@+id/fingerprint_icon"
                         android:layout_alignTop="@+id/fingerprint_icon"
                         android:layout_marginLeft="16dp"
@@ -108,14 +102,14 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/password_description"
-                            android:textColor="@android:color/white" />
+                            android:textColor="?android:attr/textColorSecondary" />
 
                         <TextView
                             android:id="@+id/new_fingerprint_enrolled_description"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/new_fingerprint_enrolled_description"
-                            android:textColor="@android:color/white"
+                            android:textColor="?android:attr/textColorSecondary"
                             android:visibility="gone" />
                     </FrameLayout>
 
@@ -125,16 +119,13 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentLeft="true"
                         android:layout_below="@+id/description"
-                        android:layout_marginEnd="16dp"
-                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginStart="20dp"
                         android:layout_marginTop="16dp"
                         android:ems="10"
                         android:hint="@string/password"
-                        android:textColor="@android:color/white"
                         android:imeOptions="actionGo"
-                        android:inputType="textPassword"
-                        android:textColorHint="@android:color/white"
-                        android:backgroundTint="@android:color/white"/>
+                        android:inputType="textPassword" />
 
                     <CheckBox
                         android:id="@+id/use_fingerprint_in_future_check"
@@ -172,22 +163,18 @@
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:visibility="gone" />
+                android:visibility="invisible" />
 
             <Button
                 android:id="@+id/cancel_button"
                 style="?attr/buttonBarNegativeButtonStyle"
-                android:background="@android:color/transparent"
-                android:visibility="gone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
             <Button
                 android:id="@+id/second_dialog_button"
                 style="?attr/buttonBarPositiveButtonStyle"
-                android:background="@android:color/transparent"
-                android:textColor="#287DFA"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
         </LinearLayout>
 
