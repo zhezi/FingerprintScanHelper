@@ -246,7 +246,6 @@ public class FingerprintScanFragmentDialog extends Dialog
     @Override
     public void onAuthenticated() {
         listener.onSuccess();
-        dismiss();
     }
 
     @Override
