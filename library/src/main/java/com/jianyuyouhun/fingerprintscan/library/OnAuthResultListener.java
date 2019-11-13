@@ -29,4 +29,6 @@ public interface OnAuthResultListener {
      * 设备不支持
      */
     void onDeviceNotSupport();
+
+    void userPassword();
 }

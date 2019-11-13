@@ -38,6 +38,11 @@ public class MainActivity extends AppCompatActivity {
                             public void onDeviceNotSupport() {
                                 showToast("设备不支持");
                             }
+
+                            @Override
+                            public void userPassword() {
+
+                            }
                         });
             }
         });
