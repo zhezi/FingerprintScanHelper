@@ -35,10 +35,8 @@
             android:layout_marginRight="12dp"
             android:orientation="vertical">
 
-
-
             <FrameLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <RelativeLayout
@@ -187,6 +185,7 @@
                 android:id="@+id/second_dialog_button"
                 style="?attr/buttonBarPositiveButtonStyle"
                 android:background="@android:color/transparent"
+                android:layout_gravity="center_horizontal"
                 android:textColor="#287DFA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
